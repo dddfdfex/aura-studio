@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>تطوير الموقع | عداد تقدم تفاعلي ولعبة ترفيهية</title>
+    <title>تطوير الموقع | طاقم الذكاء الاصطناعي يبني تجربتك</title>
 
     <!-- خط Playpen Sans Arabic -->
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
         }
 
         body {
-            background: linear-gradient(145deg, #0a0a0a 0%, #141414 100%);
-            color: #f0f0f0;
+            background: linear-gradient(135deg, #0b0b12 0%, #16161f 100%);
+            color: #f5f5f5;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -27,181 +27,234 @@
         }
 
         .container {
-            max-width: 950px;
+            max-width: 1100px;
             width: 100%;
-            background: rgba(20, 20, 30, 0.7);
-            backdrop-filter: blur(3px);
-            border-radius: 64px;
-            padding: 35px 25px 45px;
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(245, 197, 66, 0.2);
-            transition: all 0.3s ease;
+            background: rgba(12, 12, 18, 0.75);
+            backdrop-filter: blur(4px);
+            border-radius: 72px;
+            padding: 30px 25px 40px;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.05);
+            border: 1px solid rgba(245, 197, 66, 0.3);
+            transition: 0.2s;
         }
 
-        /* اللوجو المخصص SVG */
+        /* اللوجو */
         .logo {
-            margin-bottom: 20px;
             display: flex;
             justify-content: center;
+            margin-bottom: 15px;
         }
-
         .logo svg {
-            width: 110px;
-            height: 110px;
-            filter: drop-shadow(0 8px 18px rgba(0,0,0,0.4));
-            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            width: 100px;
+            height: 100px;
+            filter: drop-shadow(0 5px 12px rgba(0,0,0,0.6));
+            transition: transform 0.3s ease;
         }
         .logo svg:hover {
-            transform: scale(1.02) rotate(2deg);
+            transform: scale(1.02) rotate(1deg);
         }
 
         h1 {
-            font-size: 3.2rem;
+            font-size: 3rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #f5c542, #ffde8a);
+            background: linear-gradient(125deg, #f5c542, #ffdf90);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            margin-bottom: 12px;
+            margin-bottom: 5px;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
-        .sub-text {
-            font-size: 1.05rem;
-            color: #cbcbcb;
-            max-width: 500px;
-            margin: 0 auto 30px auto;
-            line-height: 1.5;
-            background: rgba(0,0,0,0.3);
-            padding: 8px 18px;
-            border-radius: 60px;
+        .tagline {
+            font-size: 1rem;
+            color: #b9b9cf;
+            background: #00000055;
             display: inline-block;
-            width: auto;
-        }
-
-        /* قسم العداد - مؤشر التحميل لمدة ساعة */
-        .timer-block {
-            background: #0e0e12;
-            border-radius: 48px;
-            padding: 20px 20px 25px;
-            margin-bottom: 40px;
-            border: 1px solid #2a2a2e;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-        }
-
-        .timer-label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #f5c542;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .time-digits {
-            font-size: 3.8rem;
-            font-weight: 800;
-            font-family: monospace;
-            letter-spacing: 5px;
-            background: #010101;
-            display: inline-block;
-            padding: 10px 30px;
-            border-radius: 90px;
-            color: #ffdf7e;
-            text-shadow: 0 0 6px #f5b81b;
-            margin-bottom: 18px;
-            border: 1px solid #3a3520;
-        }
-
-        .progress-area {
-            width: 90%;
-            margin: 15px auto;
-        }
-
-        .progress-bar-container {
-            background: #2a2a2f;
-            border-radius: 40px;
-            height: 12px;
-            overflow: hidden;
-            box-shadow: inset 0 1px 3px #00000055;
-        }
-
-        .progress-fill {
-            background: linear-gradient(90deg, #f5c542, #ffb347);
-            width: 100%;
-            height: 100%;
-            border-radius: 40px;
-            transition: width 0.3s linear;
-            box-shadow: 0 0 6px #f5b342;
-        }
-
-        .reset-btn {
-            background: #2c2c34;
-            border: none;
-            color: #ffe1a0;
-            font-size: 0.85rem;
-            font-weight: bold;
-            padding: 8px 25px;
+            padding: 6px 18px;
             border-radius: 60px;
-            margin-top: 15px;
-            cursor: pointer;
-            transition: 0.2s;
-            font-family: inherit;
+            margin-bottom: 25px;
+            backdrop-filter: blur(2px);
+        }
+
+        /* قسم عمال الذكاء الاصطناعي (المطورين) */
+        .workers-section {
+            background: #0a0a12c9;
+            border-radius: 60px;
+            padding: 20px 15px;
+            margin-bottom: 30px;
+            border: 1px solid #f5c54230;
             backdrop-filter: blur(4px);
         }
 
-        .reset-btn:hover {
-            background: #f5c542;
-            color: #1f1f1f;
-            transform: scale(0.97);
-            box-shadow: 0 0 12px #f5c54280;
-        }
-
-        .completion-message {
-            margin-top: 14px;
+        .workers-title {
+            font-size: 1.2rem;
             font-weight: 600;
-            color: #80ffb2;
-            background: #1a3a2a60;
-            padding: 6px 12px;
-            border-radius: 60px;
-            font-size: 0.85rem;
-            display: inline-block;
-        }
-
-        /* لعبة XO الأنيقة */
-        .game-section {
-            background: #09090cbb;
-            backdrop-filter: blur(5px);
-            border-radius: 56px;
-            padding: 20px 15px 25px;
-            border: 1px solid #f5c54230;
-        }
-
-        .game-section h2 {
-            font-size: 1.7rem;
-            font-weight: 600;
-            margin-bottom: 10px;
+            color: #ffe0a3;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
         }
-        .game-section h2 span {
-            font-size: 1.8rem;
+        .workers-title span {
+            font-size: 1.6rem;
         }
 
+        .workers-team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        .worker-card {
+            background: #1f1f2a;
+            border-radius: 48px;
+            padding: 15px 18px;
+            text-align: center;
+            width: 130px;
+            transition: all 0.2s;
+            border-bottom: 3px solid #f5c542;
+            box-shadow: 0 8px 14px #00000040;
+            animation: floatWorker 2.5s infinite ease-in-out;
+        }
+        .worker-card:nth-child(2) { animation-delay: 0.4s; }
+        .worker-card:nth-child(3) { animation-delay: 0.8s; }
+        .worker-card:nth-child(4) { animation-delay: 1.2s; }
+
+        @keyframes floatWorker {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .worker-avatar {
+            font-size: 3.3rem;
+            margin-bottom: 8px;
+        }
+        .worker-name {
+            font-weight: bold;
+            font-size: 0.9rem;
+            background: #f5c54220;
+            padding: 4px 10px;
+            border-radius: 40px;
+            color: #ffeaac;
+        }
+        .worker-task {
+            font-size: 0.7rem;
+            color: #bcbcbc;
+            margin-top: 6px;
+        }
+        .build-icon {
+            font-size: 1.1rem;
+            display: inline-block;
+            animation: swing 1s infinite;
+        }
+        @keyframes swing {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(12deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* قسم المؤشر الثابت (بدون تحكم) */
+        .progress-block {
+            background: #0c0c12;
+            border-radius: 56px;
+            padding: 22px 20px;
+            margin-bottom: 35px;
+            border: 1px solid #2e2e36;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .timer-label {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: #f5c542;
+            margin-bottom: 12px;
+        }
+        .time-digits {
+            font-family: monospace;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: #020202;
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 80px;
+            color: #ffe2a4;
+            text-shadow: 0 0 5px #f5a623;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #f5c54270;
+        }
+
+        .progress-area {
+            width: 90%;
+            margin: 10px auto;
+        }
+        .progress-bar-container {
+            background: #23232b;
+            border-radius: 40px;
+            height: 16px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 5px #000000;
+        }
+        .progress-fill {
+            background: linear-gradient(90deg, #f5c542, #ffb347);
+            width: 0%;
+            height: 100%;
+            border-radius: 40px;
+            transition: width 0.25s linear;
+            box-shadow: 0 0 6px #f5bd42;
+        }
+        .percentage-text {
+            margin-top: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #ffde9e;
+        }
+        .completion-message {
+            margin-top: 15px;
+            color: #a2ffb2;
+            background: #1e3a2a60;
+            padding: 6px 14px;
+            border-radius: 60px;
+            display: inline-block;
+            font-weight: 500;
+        }
+        .info-note {
+            font-size: 0.7rem;
+            margin-top: 12px;
+            color: #aaa;
+        }
+
+        /* لعبة XO (تيك تاك تو) */
+        .game-section {
+            background: #09090ec9;
+            backdrop-filter: blur(5px);
+            border-radius: 56px;
+            padding: 20px 15px 28px;
+            border: 1px solid #f5c54230;
+        }
+        .game-section h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
         .game-status {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             background: #00000066;
             display: inline-block;
             padding: 8px 24px;
-            border-radius: 40px;
+            border-radius: 60px;
             margin: 12px auto 20px;
             font-weight: 500;
             color: #f5e2b0;
         }
-
         .game-board {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -212,40 +265,25 @@
             padding: 10px;
             border-radius: 48px;
         }
-
         .cell {
-            background: #1e1e24;
-            aspect-ratio: 1 / 1;
+            background: #1e1e28;
+            aspect-ratio: 1/1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3.8rem;
+            font-size: 3.6rem;
             font-weight: bold;
             border-radius: 28px;
             cursor: pointer;
-            transition: 0.2s ease;
+            transition: 0.1s linear;
             color: #f5c542;
-            text-shadow: 0 2px 5px black;
-            border: 1px solid #3f3f46;
-            box-shadow: 0 6px 0 #0b0b0e;
+            border: 1px solid #40404a;
+            box-shadow: 0 6px 0 #0a0a0f;
         }
-
-        .cell.X {
-            color: #ffcc66;
-            text-shadow: 0 0 6px #f5a623;
-        }
-        .cell.O {
-            color: #7fe0ff;
-            text-shadow: 0 0 5px #2aa9ff;
-        }
-        .cell:active {
-            transform: scale(0.96);
-        }
-        .disabled-cell {
-            cursor: default;
-            filter: brightness(0.9);
-        }
-
+        .cell.X { color: #ffdd88; text-shadow: 0 0 8px #f5a623; }
+        .cell.O { color: #8cd4ff; text-shadow: 0 0 6px #2aa9ff; }
+        .cell:active { transform: scale(0.96); }
+        .disabled-cell { cursor: default; filter: brightness(0.85); }
         .reset-game-btn {
             background: #f5c54220;
             border: 1.5px solid #f5c542;
@@ -254,7 +292,7 @@
             font-weight: 600;
             padding: 10px 28px;
             border-radius: 60px;
-            margin-top: 18px;
+            margin-top: 20px;
             cursor: pointer;
             transition: 0.2s;
         }
@@ -263,46 +301,29 @@
             color: #111;
             box-shadow: 0 0 12px #f5c542;
         }
-
         footer {
             font-size: 0.7rem;
             margin-top: 35px;
             opacity: 0.6;
-            color: #aaa;
+            text-align: center;
         }
 
-        @media (max-width: 550px) {
-            .container {
-                padding: 25px 18px;
-            }
-            .time-digits {
-                font-size: 2.5rem;
-                letter-spacing: 2px;
-                padding: 5px 18px;
-            }
-            h1 {
-                font-size: 2.4rem;
-            }
-            .cell {
-                font-size: 2.6rem;
-                border-radius: 20px;
-            }
-            .game-board {
-                gap: 8px;
-            }
-        }
-
-        button {
-            font-family: 'Playpen Sans Arabic', monospace;
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .time-digits { font-size: 2.4rem; letter-spacing: 2px; padding: 5px 16px; }
+            h1 { font-size: 2.2rem; }
+            .worker-card { width: 100px; padding: 10px; }
+            .worker-avatar { font-size: 2.5rem; }
+            .cell { font-size: 2.5rem; border-radius: 20px; }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <!-- لوجو تفاعلي SVG -->
+    <!-- لوجو شركة تقنية -->
     <div class="logo">
         <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="60" cy="60" r="52" stroke="#F5C542" stroke-width="2.5" stroke-dasharray="6 6" fill="#1A1A24"/>
+            <circle cx="60" cy="60" r="52" stroke="#F5C542" stroke-width="2.5" stroke-dasharray="6 6" fill="#15151E"/>
             <path d="M60 25 L68 48 L93 48 L73 61 L81 85 L60 71 L39 85 L47 61 L27 48 L52 48 L60 25Z" fill="#F5C542" stroke="#D9A42E" stroke-width="1.2"/>
             <circle cx="60" cy="60" r="8" fill="#FFE0A3" stroke="#B57C1C" stroke-width="1.5"/>
             <path d="M42 34 L52 42 L42 50" stroke="#FFD966" stroke-width="2" stroke-linecap="round"/>
@@ -310,132 +331,197 @@
         </svg>
     </div>
 
-    <h1>⚙️ قيد التطوير</h1>
-    <div class="sub-text">نحن نبني شيئاً مميزاً.. شكراً لصبرك الجميل</div>
+    <h1>🤖 قيد التطوير الذكي</h1>
+    <div class="tagline">فريق الذكاء الاصطناعي يعمل على مدار الساعة لإنشاء تجربة استثنائية</div>
 
-    <!-- مؤشر التحميل لمدة ساعة -->
-    <div class="timer-block">
-        <div class="timer-label">⏳ الوقت المتبقي حتى الاكتمال المتوقع</div>
-        <div class="time-digits" id="timerDisplay">60:00</div>
-        <div class="progress-area">
-            <div class="progress-bar-container">
-                <div class="progress-fill" id="progressFill" style="width: 100%;"></div>
+    <!-- عمال البناء (AI Builders) -->
+    <div class="workers-section">
+        <div class="workers-title">
+            <span>👷‍♂️</span> طاقم الهندسة الاصطناعية <span>⚙️</span>
+        </div>
+        <div class="workers-team">
+            <div class="worker-card">
+                <div class="worker-avatar">👩‍💻🧠</div>
+                <div class="worker-name">ذكاء البنية</div>
+                <div class="worker-task">بناء <span class="build-icon">🏗️</span> الهيكل</div>
+            </div>
+            <div class="worker-card">
+                <div class="worker-avatar">🤖🛠️</div>
+                <div class="worker-name">أتمتة التصميم</div>
+                <div class="worker-task">تحسين الأداء</div>
+            </div>
+            <div class="worker-card">
+                <div class="worker-avatar">🧑‍🔧✨</div>
+                <div class="worker-name">مهندسو UX</div>
+                <div class="worker-task">تجربة سلسة</div>
+            </div>
+            <div class="worker-card">
+                <div class="worker-avatar">⚡🧬</div>
+                <div class="worker-name">خوارزميات ذكية</div>
+                <div class="worker-task">تكامل فوري</div>
             </div>
         </div>
-        <button class="reset-btn" id="resetTimerBtn">⟳ إعادة ضبط الساعة</button>
-        <div id="completionMessage" class="completion-message"></div>
+        <div style="text-align:center; margin-top: 18px; font-size:0.8rem; color:#cacae6;">✧  يعمل الروبوتات بجهد لتسريع الإطلاق  ✧</div>
     </div>
 
-    <!-- لعبة إكس-أو للتسلية الخفيفة -->
+    <!-- مؤشر التحميل الثابت (كل دقيقة = 1%، بدون أي خيار تحكم) -->
+    <div class="progress-block">
+        <div class="timer-label">⏳ تقدم البناء التلقائي (كل دقيقة +1%)</div>
+        <div class="time-digits" id="elapsedTimer">00:00</div>
+        <div class="progress-area">
+            <div class="progress-bar-container">
+                <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+            <div class="percentage-text" id="percentageText">0% مكتمل</div>
+        </div>
+        <div id="completionMessageArea" class="completion-message"></div>
+        <div class="info-note">🔒 العداد آلي ومرتبط بالبناء التلقائي .. لا يمكن إعادة ضبطه، وكل دقيقة تزيد نسبة الإنجاز 1%</div>
+    </div>
+
+    <!-- لعبة إكس-أو للتسلية -->
     <div class="game-section">
         <h2>
-            <span>🎮</span> لعبة إكس & أو <span>✨</span>
+            <span>🎮</span> لعبة إكس & أو (تحدي مع الكمبيوتر) <span>🤖</span>
         </h2>
-        <div class="game-status" id="gameStatus">دورك يا بطل! (X)</div>
+        <div class="game-status" id="gameStatus">🎲 دورك يا قائد! (X)</div>
         <div class="game-board" id="gameBoard"></div>
-        <button class="reset-game-btn" id="resetGameBtn">🔄 لعبة جديدة</button>
-        <footer style="margin-top: 15px;">⭐ تسلية أثناء الانتظار — العب مع الذكاء الاصطناعي البسيط</footer>
+        <button class="reset-game-btn" id="resetGameBtn">🔄 بدء جولة جديدة</button>
+        <footer style="margin-top: 12px;">💡 العب مع الذكاء الاصطناعي للمتعة أثناء اكتمال البناء</footer>
     </div>
-    <footer>✨ كل ثانية تقربنا لإطلاق أفضل تجربة</footer>
+    <footer>🚀 البناء يتقدم أوتوماتيكياً . شكراً لانتظارك الإصدار القادم</footer>
 </div>
 
 <script>
-    // -------------------------------
-    // 1. المؤقت التنازلي لمدة ساعة (3600 ثانية)
-    // -------------------------------
-    let remainingSeconds = 3600;       // 60 دقيقة
+    // ----------------------------------------------
+    // 1. مؤتمر البناء الثابت: كل دقيقة تمر تزيد النسبة 1% (بدون أي تحكم)
+    //    باستخدام timestamp ثابت يبدأ من لحظة تحميل الصفحة.
+    //    لا يوجد زر إعادة ضبط، ولا يمكن التلاعب بالعداد.
+    //    إجمالي الوقت = 60 دقيقة = 3600 ثانية = 100%
+    // ----------------------------------------------
+    const TOTAL_SECONDS = 3600;        // 60 دقيقة
+    let startTimestamp = null;          // وقت بدء القياس بالمللي ثانية
     let timerInterval = null;
-    let timerActive = true;
+    let completedFlag = false;
 
-    const timerDisplayEl = document.getElementById('timerDisplay');
+    // عناصر الـ DOM
+    const elapsedTimerEl = document.getElementById('elapsedTimer');
     const progressFillEl = document.getElementById('progressFill');
-    const resetTimerBtn = document.getElementById('resetTimerBtn');
-    const completionMsgDiv = document.getElementById('completionMessage');
+    const percentageTextEl = document.getElementById('percentageText');
+    const completionMsgArea = document.getElementById('completionMessageArea');
 
-    // تحديث واجهة العداد
-    function updateTimerUI() {
-        const mins = Math.floor(remainingSeconds / 60);
-        const secs = remainingSeconds % 60;
-        timerDisplayEl.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-        const percent = (remainingSeconds / 3600) * 100;
-        progressFillEl.style.width = `${Math.max(0, percent)}%`;
-        
-        if (remainingSeconds <= 0) {
-            progressFillEl.style.width = '0%';
-            if (completionMsgDiv.innerText !== '🎉 تم الانتهاء من التطوير! شكراً لانتظارك 🎉') {
-                completionMsgDiv.innerHTML = '🎉 تم الانتهاء من التطوير! شكراً لانتظارك 🎉';
-                completionMsgDiv.style.color = '#caffb9';
-            }
-        } else {
-            if (completionMsgDiv.innerText.includes('تم الانتهاء')) {
-                completionMsgDiv.innerHTML = '';
-            }
+    // دالة لتحديث كل شيء بناءً على الوقت المنقضي (secondsElapsed)
+    function updateProgressAndTimer(secondsElapsed) {
+        let elapsedSec = Math.min(secondsElapsed, TOTAL_SECONDS);
+        const percentCompleted = (elapsedSec / TOTAL_SECONDS) * 100;
+        const percentFixed = Math.min(100, Math.floor(percentCompleted * 100) / 100);
+        // عرض النسبة بدون كسور مخيفة
+        const percentInt = Math.floor(percentFixed);
+        percentageTextEl.innerText = `${percentInt}% مكتمل`;
+        progressFillEl.style.width = `${percentFixed}%`;
+
+        // عرض الوقت المنقضي بصيغة mm:ss
+        const mins = Math.floor(elapsedSec / 60);
+        const secs = elapsedSec % 60;
+        elapsedTimerEl.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+        // إدارة رسالة الاكتمال
+        if (elapsedSec >= TOTAL_SECONDS && !completedFlag) {
+            completedFlag = true;
+            completionMsgArea.innerHTML = '🎉 100% تم الانتهاء من التطوير بنجاح! شكراً لانتظارك 🎉';
+            completionMsgArea.style.color = '#caffb0';
+            progressFillEl.style.background = "linear-gradient(90deg, #6fcf97, #2ecc71)";
+            if (timerInterval) clearInterval(timerInterval);
+        } else if (elapsedSec < TOTAL_SECONDS && completedFlag) {
+            // حالة نادرة لكن احتياطياً
+            completedFlag = false;
+            completionMsgArea.innerHTML = '';
         }
     }
 
-    function stopTimer() {
-        if (timerInterval) {
+    // حساب الوقت المنقضي منذ بدء التطبيق
+    function refreshElapsedTime() {
+        if (!startTimestamp) {
+            // يحدث فقط إذا لم يتم البدء (خطأ أمان)
+            return;
+        }
+        const now = Date.now();
+        let elapsedSeconds = Math.floor((now - startTimestamp) / 1000);
+        if (elapsedSeconds > TOTAL_SECONDS) elapsedSeconds = TOTAL_SECONDS;
+        updateProgressAndTimer(elapsedSeconds);
+        if (elapsedSeconds >= TOTAL_SECONDS && timerInterval) {
             clearInterval(timerInterval);
             timerInterval = null;
         }
     }
 
-    function startTimer() {
-        if (timerInterval) stopTimer();
+    // بدء العداد الثابت (لا يمكن إعادة ضبطه)
+    function initFixedTimer() {
+        // نخزن وقت البدء في sessionStorage حتى لا يتم إعادة الضبط على إعادة تحميل الصفحة بسهولة
+        // بهذه الطريقة حتى لو حدث تحديث للصفحة، يستمر العداد من حيث توقف (لن يبدأ من صفر إلا إذا أغلق المتصفح نهائياً أو مسح sessionStorage)
+        // هذا يجعل المستخدم لا يستطيع "تحايل" التوقيت عبر إعادة التحميل، ويتوافق مع "الساعة مقدرش اظبطها"
+        let storedStart = sessionStorage.getItem('buildStartTimestamp');
+        if (storedStart && !isNaN(parseInt(storedStart))) {
+            startTimestamp = parseInt(storedStart);
+            // لكن تحقق من أن الوقت لم يتجاوز الساعة كاملة
+            const now = Date.now();
+            const elapsedFromStore = Math.floor((now - startTimestamp) / 1000);
+            if (elapsedFromStore >= TOTAL_SECONDS) {
+                // انتهى البناء بالفعل
+                startTimestamp = now - (TOTAL_SECONDS * 1000);
+                updateProgressAndTimer(TOTAL_SECONDS);
+                completedFlag = true;
+                completionMsgArea.innerHTML = '🎉 100% تم الانتهاء من التطوير بنجاح! شكراً لانتظارك 🎉';
+                if (timerInterval) clearInterval(timerInterval);
+                return;
+            } else if (elapsedFromStore < 0) {
+                // حالة شاذة: التوقيت في المستقبل - نعيد تعيين
+                startTimestamp = now;
+                sessionStorage.setItem('buildStartTimestamp', startTimestamp);
+            }
+        } else {
+            // أول مرة
+            startTimestamp = Date.now();
+            sessionStorage.setItem('buildStartTimestamp', startTimestamp);
+        }
+        
+        // تحديث فوري
+        refreshElapsedTime();
+        
+        // تشغيل الموقت كل ثانية
+        if (timerInterval) clearInterval(timerInterval);
         timerInterval = setInterval(() => {
-            if (remainingSeconds > 0) {
-                remainingSeconds--;
-                updateTimerUI();
-                // إذا وصل إلى الصفر نعرض رسالة ونوقف الحركة (لكن يبقى العداد صفر)
-                if (remainingSeconds === 0) {
-                    stopTimer();
-                    updateTimerUI();
-                    completionMsgDiv.innerHTML = '🎉 تم الانتهاء من التطوير! شكراً لانتظارك 🎉';
-                    completionMsgDiv.style.color = '#b9ffcf';
-                }
+            if (!startTimestamp) return;
+            const now = Date.now();
+            let elapsedSec = Math.floor((now - startTimestamp) / 1000);
+            if (elapsedSec >= TOTAL_SECONDS) {
+                updateProgressAndTimer(TOTAL_SECONDS);
+                if (timerInterval) clearInterval(timerInterval);
+                timerInterval = null;
+                completedFlag = true;
             } else {
-                // عند الصفر نتأكد من إيقاف التحديثات
-                if (timerInterval) stopTimer();
+                updateProgressAndTimer(elapsedSec);
             }
         }, 1000);
     }
 
-    function resetTimer() {
-        remainingSeconds = 3600;
-        updateTimerUI();
-        // إذا كانت هناك رسالة اكتمال نظفها
-        completionMsgDiv.innerHTML = '';
-        // إعادة تشغيل المؤقت إذا كان متوقفاً أو يعمل
-        stopTimer();
-        startTimer();
-        timerActive = true;
-    }
+    // استدعاء التهيئة
+    initFixedTimer();
 
-    resetTimerBtn.addEventListener('click', () => {
-        resetTimer();
-        // إضافة تأثير اهتزاز لطيف اختياري
-        const btn = resetTimerBtn;
-        btn.style.transform = 'scale(0.96)';
-        setTimeout(() => { btn.style.transform = ''; }, 150);
-    });
+    // -----------------------------
+    // 2. لعبة XO (تيك تاك تو) مع ذكاء اصطناعي بسيط (مش عشوائي خفيف لكن بسيط)
+    //    لأن طلب "على مستوي الذكاء الاصطناعي" أضفنا واجهة العمال، لكن اللعبة تبقى مسلية
+    //    لا نريد تعقيد مبالغ فيه، لكن البوت يقوم بحركات ذكية بسيطة (منع الفوز)
+    //    سأضيف بوت ذكي قليلاً: يحاول الفوز أو منع فوز اللاعب.
+    // -----------------------------
+    let board = ['', '', '', '', '', '', '', '', ''];
+    let gameActive = true;
+    let currentPlayer = 'X';    // X = إنسان, O = الكمبيوتر
+    let aiThinking = false;
 
-    // بدء العداد فور تحميل الصفحة
-    startTimer();
-    updateTimerUI();
-
-    // -------------------------------
-    // 2. لعبة XO (تيك تاك تو) ضد الذكاء الاصطناعي البسيط (عشوائي)
-    // -------------------------------
-    const boardElement = document.getElementById('gameBoard');
+    const gameBoardEl = document.getElementById('gameBoard');
     const gameStatusEl = document.getElementById('gameStatus');
     const resetGameBtn = document.getElementById('resetGameBtn');
 
-    let board = ['', '', '', '', '', '', '', '', ''];
-    let gameActive = true;
-    let currentPlayer = 'X';   // X هو اللاعب (الإنسان) ، O هو الكمبيوتر
-    let lockBoardForAI = false; // لمنع النقر أثناء انتظار حركة الكمبيوتر
-
-    // أنماط الفوز
     const winPatterns = [
         [0,1,2], [3,4,5], [6,7,8],
         [0,3,6], [1,4,7], [2,5,8],
@@ -445,223 +531,191 @@
     function checkWinner(boardState, player) {
         for (let pattern of winPatterns) {
             const [a,b,c] = pattern;
-            if (boardState[a] === player && boardState[b] === player && boardState[c] === player) {
-                return true;
-            }
+            if (boardState[a] === player && boardState[b] === player && boardState[c] === player) return true;
         }
         return false;
     }
 
-    function isBoardFull() {
+    function isBoardFullCheck() {
         return board.every(cell => cell !== '');
     }
 
-    function updateGameStatus(message, isError = false) {
+    function evaluateWinner() {
+        if (checkWinner(board, 'X')) return 'X';
+        if (checkWinner(board, 'O')) return 'O';
+        if (isBoardFullCheck()) return 'tie';
+        return null;
+    }
+
+    function updateGameStatusMessage(message, isTemp = false) {
         gameStatusEl.innerHTML = message;
-        if (isError) {
+        if (isTemp) {
             setTimeout(() => {
-                if (gameActive && !lockBoardForAI && currentPlayer === 'X') 
-                    gameStatusEl.innerHTML = `🎲 دورك يا لاعب (X)`;
-                else if (gameActive && !lockBoardForAI && currentPlayer === 'O')
-                    gameStatusEl.innerHTML = `🤖 الكمبيوتر يفكر...`;
+                if (gameActive && !aiThinking && currentPlayer === 'X') 
+                    gameStatusEl.innerHTML = '🎮 دورك الآن! (X) اضغط على مربع';
+                else if (gameActive && currentPlayer === 'O' && !aiThinking)
+                    gameStatusEl.innerHTML = '🧠 الذكاء الاصطناعي يفكر...';
             }, 1200);
         }
     }
 
-    function endGame(winner) {
-        gameActive = false;
-        if (winner === 'X') {
-            gameStatusEl.innerHTML = '🏆 فزت أنت! عبقري! 🎉 اضغط لعبة جديدة للمتابعة';
-        } else if (winner === 'O') {
-            gameStatusEl.innerHTML = '💻 الكمبيوتر فاز هذه المرة! حاول مجدداً 💪';
-        } else if (winner === 'tie') {
-            gameStatusEl.innerHTML = '🤝 تعادل! أعد المحاولة أو جرب حظك مجدداً 🎲';
+    // ذكاء اصطناعي ذكي: يحاول الفوز أولاً ثم منع فوز الخصم ثم أول خانة متاحة
+    function getBestMove() {
+        // 1. هل يستطيع الكمبيوتر (O) الفوز؟
+        for (let i = 0; i < 9; i++) {
+            if (board[i] === '') {
+                board[i] = 'O';
+                if (checkWinner(board, 'O')) {
+                    board[i] = '';
+                    return i;
+                }
+                board[i] = '';
+            }
         }
+        // 2. منع فوز اللاعب (X)
+        for (let i = 0; i < 9; i++) {
+            if (board[i] === '') {
+                board[i] = 'X';
+                if (checkWinner(board, 'X')) {
+                    board[i] = '';
+                    return i;
+                }
+                board[i] = '';
+            }
+        }
+        // 3. إستراتيجية تفضيل المركز والزوايا
+        const prefered = [4, 0, 2, 6, 8, 1, 3, 5, 7];
+        for (let idx of prefered) {
+            if (board[idx] === '') return idx;
+        }
+        return -1;
     }
 
-    // عرض اللوحة
+    function aiMove() {
+        if (!gameActive || currentPlayer !== 'O' || aiThinking) return;
+        aiThinking = true;
+        gameStatusEl.innerHTML = '🤖 العمال الآليون يخططون للخطوة...';
+        
+        setTimeout(() => {
+            if (!gameActive || currentPlayer !== 'O') {
+                aiThinking = false;
+                renderBoard();
+                return;
+            }
+            const moveIndex = getBestMove();
+            if (moveIndex !== -1 && board[moveIndex] === '') {
+                board[moveIndex] = 'O';
+                renderBoard();
+                const winner = evaluateWinner();
+                if (winner === 'O') {
+                    gameActive = false;
+                    gameStatusEl.innerHTML = '💻 فاز فريق الذكاء الاصطناعي! حاول مرة أخرى 🧠';
+                    renderBoard();
+                    aiThinking = false;
+                    return;
+                } else if (winner === 'tie') {
+                    gameActive = false;
+                    gameStatusEl.innerHTML = '🤝 تعادل مذهل! أعد التحدي 💪';
+                    renderBoard();
+                    aiThinking = false;
+                    return;
+                }
+                // تبديل الدور
+                currentPlayer = 'X';
+                gameStatusEl.innerHTML = '🎮 دورك الآن! اضغط على أي خانة';
+                aiThinking = false;
+                renderBoard();
+            } else {
+                // لو لم يجد حركة ولكن اللوحة ممتلئة
+                if (isBoardFullCheck()) {
+                    gameActive = false;
+                    gameStatusEl.innerHTML = '🤝 تعادل! انتهت اللعبة';
+                    renderBoard();
+                } else {
+                    // خطأ نادر لكن نعيد
+                    currentPlayer = 'X';
+                    gameStatusEl.innerHTML = '✨ دورك مجدداً ✨';
+                }
+                aiThinking = false;
+                renderBoard();
+            }
+        }, 200);
+    }
+
+    function playerMove(index) {
+        if (!gameActive || aiThinking || currentPlayer !== 'X' || board[index] !== '') {
+            if (!gameActive) updateGameStatusMessage('❗ اللعبة انتهت، اضغط لعبة جديدة', true);
+            else if (aiThinking) updateGameStatusMessage('⏳ انتظر حتى يكمل العمال تحركهم', true);
+            else if (currentPlayer !== 'X') updateGameStatusMessage('🤖 ليس دورك، المهندسون الآليون يتحركون', true);
+            else if (board[index] !== '') updateGameStatusMessage('⚠️ هذه الخانة مشغولة!', true);
+            return false;
+        }
+        board[index] = 'X';
+        renderBoard();
+        const winner = evaluateWinner();
+        if (winner === 'X') {
+            gameActive = false;
+            gameStatusEl.innerHTML = '🏆 انتصرت يا ذكي! احتفل ثم ابدأ لعبة جديدة 🎉';
+            renderBoard();
+            return true;
+        } else if (winner === 'tie') {
+            gameActive = false;
+            gameStatusEl.innerHTML = '😮 تعادل محكم! اضغط لعبة جديدة للمواجهة';
+            renderBoard();
+            return true;
+        }
+        currentPlayer = 'O';
+        renderBoard();
+        aiMove();
+        return true;
+    }
+
     function renderBoard() {
-        boardElement.innerHTML = '';
+        gameBoardEl.innerHTML = '';
         for (let i = 0; i < 9; i++) {
             const cell = document.createElement('div');
             cell.classList.add('cell');
             if (board[i] === 'X') cell.classList.add('X');
             if (board[i] === 'O') cell.classList.add('O');
             cell.textContent = board[i];
-            if (!gameActive || lockBoardForAI || board[i] !== '' || currentPlayer !== 'X') {
+            const isDisabled = (!gameActive) || (aiThinking) || (currentPlayer !== 'X') || (board[i] !== '');
+            if (isDisabled) {
                 cell.classList.add('disabled-cell');
                 cell.style.cursor = 'default';
             } else {
                 cell.style.cursor = 'pointer';
             }
-            cell.addEventListener('click', (function(index) {
-                return function() { handleCellClick(index); };
+            cell.addEventListener('click', (function(idx) {
+                return function() { playerMove(idx); };
             })(i));
-            boardElement.appendChild(cell);
+            gameBoardEl.appendChild(cell);
         }
     }
 
-    // حركة اللاعب (X)
-    function playerMove(index) {
-        if (!gameActive || lockBoardForAI || currentPlayer !== 'X' || board[index] !== '') return false;
-        
-        // تنفيذ الحركة
-        board[index] = 'X';
-        renderBoard();
-
-        // فحص الفوز
-        if (checkWinner(board, 'X')) {
-            endGame('X');
-            renderBoard();
-            return true;
-        }
-        if (isBoardFull()) {
-            endGame('tie');
-            renderBoard();
-            return true;
-        }
-
-        // تبديل الدور للكمبيوتر
-        currentPlayer = 'O';
-        gameStatusEl.innerHTML = '🤖 الكمبيوتر يحلل ...';
-        renderBoard(); // تحديث القفل لتعطيل النقرات
-        
-        // استدعاء حركة الكمبيوتر بعد تأخير بسيط (واقعية)
-        lockBoardForAI = true;
-        setTimeout(() => {
-            if (gameActive && currentPlayer === 'O') {
-                computerMove();
-            } else {
-                lockBoardForAI = false;
-                renderBoard();
-            }
-        }, 280);
-        return true;
-    }
-
-    // حركة الذكاء الاصطناعي (عشوائي من الخلايا الفارغة)
-    function computerMove() {
-        if (!gameActive || currentPlayer !== 'O') {
-            lockBoardForAI = false;
-            renderBoard();
-            return;
-        }
-        
-        const emptyIndices = board.reduce((acc, cell, idx) => {
-            if (cell === '') acc.push(idx);
-            return acc;
-        }, []);
-        
-        if (emptyIndices.length === 0) {
-            if (isBoardFull() && gameActive) {
-                endGame('tie');
-            }
-            lockBoardForAI = false;
-            renderBoard();
-            return;
-        }
-        
-        // اختيار عشوائي (بوت بسيط)
-        const randomIndex = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
-        board[randomIndex] = 'O';
-        renderBoard();
-        
-        // فوز للكمبيوتر؟
-        if (checkWinner(board, 'O')) {
-            endGame('O');
-            lockBoardForAI = false;
-            renderBoard();
-            return;
-        }
-        if (isBoardFull()) {
-            endGame('tie');
-            lockBoardForAI = false;
-            renderBoard();
-            return;
-        }
-        
-        // العودة إلى اللاعب
-        currentPlayer = 'X';
-        gameStatusEl.innerHTML = '🎮 دورك الآن! (X) اضغط على أي خلية';
-        lockBoardForAI = false;
-        renderBoard();
-        
-        // تحقق إضافي: إذا كانت اللعبة غير نشطة لسبب ما
-        if (!gameActive) renderBoard();
-    }
-    
-    function handleCellClick(index) {
-        if (!gameActive) {
-            gameStatusEl.innerHTML = '❗ اللعبة انتهت، اضغط "لعبة جديدة" للاستمرار';
-            return;
-        }
-        if (lockBoardForAI) {
-            gameStatusEl.innerHTML = '⏳ انتظر دور الكمبيوتر قليلاً...';
-            return;
-        }
-        if (currentPlayer !== 'X') {
-            gameStatusEl.innerHTML = '🤖 ليس دورك الآن، الكمبيوتر يتحرك!';
-            return;
-        }
-        if (board[index] !== '') {
-            gameStatusEl.innerHTML = '⚠️ هذه الخانة مشغولة، اختر أخرى';
-            setTimeout(() => {
-                if (gameActive && currentPlayer === 'X' && !lockBoardForAI) 
-                    gameStatusEl.innerHTML = '🎮 دورك الآن! (X)';
-            }, 800);
-            return;
-        }
-        
-        playerMove(index);
-    }
-
-    // إعادة تعيين اللعبة بالكامل
     function resetGame() {
         board = ['', '', '', '', '', '', '', '', ''];
         gameActive = true;
-        currentPlayer = 'X';   // اللاعب يبدأ أولاً دائماً
-        lockBoardForAI = false;
-        // إلغاء أي timer معلق للـ AI (منع تحرك غير مرغوب)
-        gameStatusEl.innerHTML = '✨ بداية جديدة! دورك يا بطل (X) ✨';
+        currentPlayer = 'X';
+        aiThinking = false;
+        gameStatusEl.innerHTML = '🎲 بداية جديدة! أنت (X) ضد الذكاء الاصطناعي';
         renderBoard();
     }
-    
+
     resetGameBtn.addEventListener('click', () => {
         resetGame();
-        // نضمن انهاء اي عملية AI عالقة
-        if (lockBoardForAI) lockBoardForAI = false;
-        gameActive = true;
-        currentPlayer = 'X';
-        renderBoard();
     });
-    
-    // تهيئة اللعبة
-    function initGame() {
-        resetGame();
-    }
-    
-    initGame();
-    
-    // تحسين إضافي: في حال انتهى العداد التنازلي، لا نؤثر على اللعبة لكن نضيف تأثير بسيط مرحة
-    // ربط بسيط: عند انتهاء الساعة، نعطي إيحاء للاعب
-    const originalIntervalCheck = setInterval(() => {
-        if (remainingSeconds === 0 && gameActive && !lockBoardForAI && currentPlayer === 'X') {
-            // مجرد رسالة لطيفة لكن لا نوقف اللعبة
-            if (gameStatusEl.innerHTML.includes('دورك') && !gameStatusEl.innerHTML.includes('انتهى التطوير')) {
-                gameStatusEl.innerHTML = `🎉 اكتمل التطوير! لكن لا تزال اللعبة مستمرة للتسلية 🎉 — دورك الآن`;
-                setTimeout(() => {
-                    if (gameActive && currentPlayer === 'X' && !lockBoardForAI)
-                        gameStatusEl.innerHTML = '🎮 دورك الآن! (X)';
-                }, 2500);
-            }
+
+    // بدء اللعبة
+    resetGame();
+
+    // ضمان أنه عند اكتمال البناء 100% تظهر رسالة لكن لا تؤثر على اللعبة
+    // إضافة تأثير تلميحي عندما يكتمل المؤقت
+    const checkCompletionInterval = setInterval(() => {
+        if (completedFlag && !completionMsgArea.innerHTML.includes('شكراً')) {
+            // رسالة نهائية
+            completionMsgArea.innerHTML = '🎉 100% تم الانتهاء من التطوير بنجاح! شكراً لانتظارك 🎉';
         }
-    }, 3000);
-    
-    // تنظيف الفواصل عند إعادة التوجيه اختياري (لا ضرورة)
-    window.addEventListener('beforeunload', () => {
-        if (timerInterval) clearInterval(timerInterval);
-        clearInterval(originalIntervalCheck);
-    });
+    }, 2000);
 </script>
 </body>
 </html>
