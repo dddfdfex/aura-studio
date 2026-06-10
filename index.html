@@ -1,40 +1,623 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Studio | Under Construction</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;500;700&display=swap">
-    <style>
-        /* إعادة تعيين الأنماط الأساسية */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
 
-        body {
-            background-color: #000000; /* خلفية سوداء مطلقة */
-            color: #89CFF0; /* لون الخط بيبي بلو بدون نيون */
-            font-family: 'Playpen Sans', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* حاوية المحتويات الرئيسية للصفحة الداخلية */
-        .container {
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
-            padding: 20px;
-        }
+<title>قيد التطوير</title>
 
+
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+
+body{
+
+
+width:100%;
+
+height:100vh;
+
+
+background:#000;
+
+
+overflow:hidden;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+font-family:'Playpen+Sans+Arabic',sans-serif;
+
+
+}
+
+
+
+
+/* الانترو */
+
+
+.intro{
+
+
+position:fixed;
+
+
+inset:0;
+
+
+background:#000;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+z-index:20;
+
+
+animation:hideIntro 4s forwards;
+
+
+}
+
+
+
+.intro h1{
+
+
+font-size:32px;
+
+
+color:#b8eaff;
+
+
+font-weight:800;
+
+
+animation:introShow 3s;
+
+
+}
+
+
+
+
+@keyframes introShow{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:scale(.8);
+
+
+}
+
+
+
+to{
+
+
+opacity:1;
+
+
+transform:scale(1);
+
+
+}
+
+
+
+}
+
+
+
+
+@keyframes hideIntro{
+
+
+0%{
+
+opacity:1;
+
+}
+
+
+85%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+
+opacity:0;
+
+
+visibility:hidden;
+
+
+}
+
+
+}
+
+
+
+
+
+.container{
+
+
+height:100vh;
+
+
+width:100%;
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+text-align:center;
+
+
+padding:15px;
+
+
+}
+
+
+
+
+
+.logo{
+
+
+width:230px;
+
+
+max-width:70%;
+
+
+}
+
+
+
+
+
+.title{
+
+
+margin-top:15px;
+
+
+font-size:38px;
+
+
+font-weight:800;
+
+
+color:#b8eaff;
+
+
+
+}
+
+
+
+
+.subtitle{
+
+
+margin-top:8px;
+
+
+font-size:18px;
+
+
+color:#9ed8ed;
+
+
+
+}
+
+
+
+
+/* صورة العمال 3D */
+
+
+.workers{
+
+
+margin-top:15px;
+
+
+}
+
+
+
+.workers img{
+
+
+width:260px;
+
+
+max-width:80vw;
+
+
+display:block;
+
+
+}
+
+
+
+
+/* العداد */
+
+
+.timer-box{
+
+
+margin-top:15px;
+
+
+width:280px;
+
+
+padding:18px;
+
+
+background:#0b0b0b;
+
+
+border:1px solid #35515c;
+
+
+border-radius:20px;
+
+
+}
+
+
+
+.timer-title{
+
+
+color:#9edff5;
+
+
+font-size:16px;
+
+
+}
+
+
+
+#timer{
+
+
+margin-top:8px;
+
+
+font-size:38px;
+
+
+font-family:Arial;
+
+
+letter-spacing:5px;
+
+
+color:#d1f3ff;
+
+
+}
+
+
+
+
+.credit{
+
+
+margin-top:15px;
+
+
+font-size:18px;
+
+
+color:#9edff5;
+
+
+}
+
+
+
+
+@media(max-width:390px){
+
+
+.logo{
+
+width:190px;
+
+}
+
+
+
+.title{
+
+font-size:32px;
+
+}
+
+
+
+.workers img{
+
+width:220px;
+
+}
+
+
+
+.timer-box{
+
+width:250px;
+
+}
+
+
+
+#timer{
+
+font-size:32px;
+
+}
+
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="intro">
+
+
+<h1>
+
+نحن نبني المستقبل
+
+</h1>
+
+
+</div>
+
+
+
+
+
+
+<div class="container">
+
+
+
+<img src="logo.png" class="logo">
+
+
+
+<div class="title">
+
+قيد التطوير
+
+</div>
+
+
+
+<div class="subtitle">
+
+نعمل على تجهيز تجربة استثنائية
+
+</div>
+
+
+
+
+<div class="workers">
+
+<img src="workers-3d.png" alt="عمال ثلاثي الأبعاد">
+
+</div>
+
+
+
+
+
+<div class="timer-box">
+
+
+<div class="timer-title">
+
+الوقت المتبقي للإطلاق
+
+</div>
+
+
+
+<div id="timer">
+
+12:00:00
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="credit">
+
+تطوير زياد الدري
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<audio id="music" src="aura-bg.mp3"></audio>
+
+
+
+
+
+
+<script>
+
+
+
+/* تشغيل الموسيقى بعد الانترو */
+
+
+setTimeout(()=>{
+
+
+let audio=document.getElementById("music");
+
+
+audio.volume=.35;
+
+
+audio.play();
+
+
+},4000);
+
+
+
+
+
+
+/* عداد 12 ساعة */
+
+
+let endTime = Date.now() + 12 * 60 * 60 * 1000;
+
+
+
+setInterval(()=>{
+
+
+let distance = endTime - Date.now();
+
+
+
+if(distance <= 0){
+
+document.getElementById("timer").innerHTML="تم الإطلاق";
+
+return;
+
+}
+
+
+
+let hours=Math.floor(distance/3600000);
+
+
+let minutes=Math.floor((distance%3600000)/60000);
+
+
+let seconds=Math.floor((distance%60000)/1000);
+
+
+
+
+document.getElementById("timer").innerHTML =
+
+String(hours).padStart(2,"0")
++
+":"
++
+String(minutes).padStart(2,"0")
++
+":"
++
+String(seconds).padStart(2,"0");
+
+
+
+},1000);
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
         /* تنسيق المشهد الداخلي (الشعار الصغير) */
         .main-logo {
             width: 140px;
