@@ -1,342 +1,207 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-
-html,body{
-
-width:100%;
-height:100%;
-
-overflow:hidden;
-
-background:#000;
-
-font-family:'Playpen Sans Arabic',sans-serif;
-
-}
-
-
-
-body{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-}
-
-
-
-.container{
-
-width:100%;
-
-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-padding:20px;
-
-text-align:center;
-
-}
-
-
-
-
-
-.intro{
-
-position:fixed;
-
-inset:0;
-
-background:#000;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:10;
-
-animation:hideIntro 4s forwards;
-
-}
-
-
-
-.intro h1{
-
-
-font-size:32px;
-
-color:#aee8ff;
-
-font-weight:800;
-
-
-animation:introText 3s;
-
-
-}
-
-
-
-@keyframes introText{
-
-
-from{
-
-opacity:0;
-
-transform:scale(.8);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-
-}
-
-
-
-@keyframes hideIntro{
-
-
-0%{
-
-opacity:1;
-
-}
-
-
-85%{
-
-opacity:1;
-
-}
-
-
-100%{
-
-opacity:0;
-
-visibility:hidden;
-
-}
-
-}
-
-
-
-
-
-.logo{
-
-width:230px;
-
-max-width:70vw;
-
-margin-bottom:15px;
-
-
-}
-
-
-
-
-
-.title{
-
-font-size:38px;
-
-font-weight:800;
-
-
-color:#b9ecff;
-
-
-margin-top:5px;
-
-
-}
-
-
-
-
-.subtitle{
-
-
-font-size:18px;
-
-
-color:#a5dff5;
-
-
-margin-top:8px;
-
-
-}
-
-
-
-
-
-.workers img{
-
-
-width:260px;
-
-max-width:75vw;
-
-
-margin-top:15px;
-
-
-}
-
-
-
-
-
-.timer-box{
-
-
-width:300px;
-
-
-padding:18px;
-
-
-margin-top:15px;
-
-
-background:#0b0b0b;
-
-
-border:1px solid #31515c;
-
-
-border-radius:18px;
-
-
-}
-
-
-
-.timer-title{
-
-
-font-size:16px;
-
-
-color:#9edff5;
-
-
-}
-
-
-
-#timer{
-
-
-margin-top:8px;
-
-
-font-size:38px;
-
-
-font-family:Arial;
-
-
-font-weight:bold;
-
-
-letter-spacing:5px;
-
-
-color:#c5f0ff;
-
-
-}
-
-
-
-
-.credit{
-
-
-margin-top:15px;
-
-
-font-size:18px;
-
-
-color:#9edff5;
-
-
-}
-
-
-
-
-
-@media(max-width:390px){
-
-
-.logo{
-
-width:190px;
-
-}
-
-
-.title{
-
-font-size:32px;
-
-}
-
-
-.workers img{
-
-width:220px;
-
-}
-
-
-.timer-box{
-
-width:260px;
-
-}
-
-
-#timer{
-
-font-size:32px;
-
-}
-
-
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Studio | Under Construction</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;500;700&display=swap">
+    <style>
+        /* إعادة تعيين الأنماط الأساسية */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000; /* خلفية سوداء قاتمة */
+            color: #89CFF0; /* لون الخط بيبي بلو */
+            font-family: 'Playpen Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* حاوية المحتويات الرئيسية */
+        .container {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* شعار الشركة مع هالة ضوئية متوهجة بلون بيبي بلو */
+        .logo {
+            width: 140px;
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(137, 207, 240, 0.6));
+            animation: pulse 3s infinite alternate ease-in-out;
+        }
+
+        /* نصوص العناوين بالتوهج النيوني */
+        .glow-text {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #89CFF0;
+            text-shadow: 0 0 10px rgba(137, 207, 240, 0.5), 0 0 20px rgba(137, 207, 240, 0.3);
+        }
+
+        .subtitle {
+            color: rgba(137, 207, 240, 0.7);
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        /* حاوية عمال الـ 3D */
+        .workers-container {
+            margin: 10px 0;
+        }
+
+        .workers-img {
+            width: 260px;
+            height: auto;
+            opacity: 0.85;
+            filter: drop-shadow(0 0 12px rgba(137, 207, 240, 0.3));
+        }
+
+        /* العداد الرقمي بلون بيبي بلو نيون */
+        #timer {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #89CFF0;
+            text-shadow: 0 0 20px rgba(137, 207, 240, 0.8), 0 0 40px rgba(137, 207, 240, 0.4);
+            font-variant-numeric: tabular-nums;
+            margin: 10px 0;
+        }
+
+        /* شريط التحذير المحيطي */
+        .warning-bar {
+            border: 1px solid #89CFF0;
+            background: rgba(137, 207, 240, 0.05);
+            padding: 12px 30px;
+            border-radius: 50px;
+            box-shadow: 0 0 15px rgba(137, 207, 240, 0.2);
+            max-width: 90%;
+            font-size: 1rem;
+            color: #89CFF0;
+        }
+
+        /* واجهة الدخول لتخطي قيود المتصفح وتشغيل الموسيقى */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        #enterBtn {
+            padding: 18px 40px;
+            background: transparent;
+            color: #89CFF0;
+            border: 2px solid #89CFF0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.4rem;
+            font-family: 'Playpen Sans', sans-serif;
+            text-shadow: 0 0 8px rgba(137, 207, 240, 0.6);
+            box-shadow: 0 0 15px rgba(137, 207, 240, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        #enterBtn:hover {
+            background-color: #89CFF0;
+            color: #000000;
+            box-shadow: 0 0 35px #89CFF0;
+            text-shadow: none;
+        }
+
+        /* حركة نبض خفيفة للشعار لإعطائه طاقة حيوية */
+        @keyframes pulse {
+            0% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(137, 207, 240, 0.5)); }
+            100% { transform: scale(1.04); filter: drop-shadow(0 0 25px rgba(137, 207, 240, 0.9)); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="overlay">
+        <button id="enterBtn">دخول إلى Aura Studio</button>
+    </div>
+
+    <div class="container">
+        <img src="logo.png" alt="Aura Studio Logo" class="logo">
+        
+        <h1 class="glow-text">AURA STUDIO</h1>
+        <p class="subtitle">DEVELOPED BY: ZIAD AL-DURRY</p>
+
+        <div class="workers-container">
+            <img src="workers.png" alt="Under Construction Workers" class="workers-img">
+        </div>
+
+        <div id="timer">12:00:00</div>
+
+        <div class="warning-bar">
+            <span>⚠️ تنبيه: طاقة الـ Aura تتصاعد.. نجهز لكم تجربة رقمية فريدة من نوعها قريباً.</span>
+        </div>
+
+        <audio id="bgAudio" loop>
+            <source src="aura-bg.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        // تشغيل الموسيقى الخلفية فور تخطي الإنترو والدخول مباشرة
+        document.getElementById('enterBtn').addEventListener('click', function() {
+            const audio = document.getElementById('bgAudio');
+            
+            // تشغيل الموسيقى فوراً بعد نقرة المستخدم الأولى
+            audio.play().catch(error => {
+                console.log("تنبيه: فشل تشغيل الصوت تلقائياً بسبب سياسة المتصفح:", error);
+            });
+            
+            // إخفاء الـ Overlay بحركة انسيابية ناعمة ليتلاشى المشهد
+            const overlay = document.getElementById('overlay');
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 500);
+        });
+
+        // منطق العداد التنازلي الاحترافي لمدة 12 ساعة متواصلة
+        let timeInSeconds = 12 * 60 * 60; 
+        const timerDisplay = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            let hours = Math.floor(timeInSeconds / 3600);
+            let minutes = Math.floor((timeInSeconds % 3600) / 60);
+            let seconds = timeInSeconds % 60;
+
+            // تنسيق الأرقام لتظهر دائماً من خانتين (مثل 02 بدلاً من 2) لضمان تماسك واجهة العداد
+            timerDisplay.innerHTML = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            if (timeInSeconds > 0) {
+                timeInSeconds--;
+            } else {
+                clearInterval(countdown);
+                timerDisplay.innerHTML = "LAUNCHED";
+                timerDisplay.style.color = "#00ff88"; // تغيير لونه للأخضر ليوحي بالاكتمال
+                timerDisplay.style.textShadow = "0 0 20px #00ff88";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
