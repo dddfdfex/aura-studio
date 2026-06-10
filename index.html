@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>قيد التطوير</title>
-
-
-<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-
-<style>
-
-
 *{
 margin:0;
 padding:0;
@@ -22,30 +5,55 @@ box-sizing:border-box;
 }
 
 
-body{
+html,body{
 
-height:100vh;
-
-background:#000;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
+width:100%;
+height:100%;
 
 overflow:hidden;
 
+background:#000;
 
 font-family:'Playpen Sans Arabic',sans-serif;
-
-color:white;
 
 }
 
 
 
-/* الانترو الاحترافي */
+body{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+.container{
+
+width:100%;
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+
+
 
 
 .intro{
@@ -62,8 +70,7 @@ justify-content:center;
 
 align-items:center;
 
-z-index:20;
-
+z-index:10;
 
 animation:hideIntro 4s forwards;
 
@@ -74,48 +81,37 @@ animation:hideIntro 4s forwards;
 .intro h1{
 
 
-font-size:55px;
+font-size:32px;
 
-font-weight:700;
+color:#aee8ff;
 
-color:#fff;
+font-weight:800;
 
+
+animation:introText 3s;
+
+
+}
+
+
+
+@keyframes introText{
+
+
+from{
 
 opacity:0;
 
-
-animation:introShow 3s forwards;
-
+transform:scale(.8);
 
 }
 
 
-
-
-@keyframes introShow{
-
-
-0%{
-
-opacity:0;
-
-letter-spacing:20px;
-
-}
-
-
-60%{
+to{
 
 opacity:1;
 
-}
-
-
-100%{
-
-opacity:1;
-
-letter-spacing:2px;
+transform:scale(1);
 
 }
 
@@ -149,45 +145,6 @@ visibility:hidden;
 
 }
 
-
-}
-
-
-
-
-
-.container{
-
-
-text-align:center;
-
-
-animation:pageShow 2s;
-
-
-}
-
-
-
-@keyframes pageShow{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-
-to{
-
-opacity:1;
-
-}
-
-
 }
 
 
@@ -196,35 +153,33 @@ opacity:1;
 
 .logo{
 
+width:230px;
 
-width:430px;
+max-width:70vw;
 
-
-max-width:80vw;
+margin-bottom:15px;
 
 
 }
+
+
 
 
 
 .title{
 
-
-margin-top:25px;
-
-
-font-size:60px;
-
+font-size:38px;
 
 font-weight:800;
 
 
-color:#f5f5f5;
+color:#b9ecff;
 
+
+margin-top:5px;
 
 
 }
-
 
 
 
@@ -232,33 +187,34 @@ color:#f5f5f5;
 .subtitle{
 
 
-margin-top:15px;
+font-size:18px;
 
 
-font-size:25px;
+color:#a5dff5;
 
 
-color:#bdbdbd;
-
+margin-top:8px;
 
 
 }
+
+
 
 
 
 .workers img{
 
 
-width:480px;
+width:260px;
+
+max-width:75vw;
 
 
-max-width:80vw;
-
-
-margin-top:20px;
+margin-top:15px;
 
 
 }
+
 
 
 
@@ -266,22 +222,22 @@ margin-top:20px;
 .timer-box{
 
 
-margin:30px auto;
+width:300px;
 
 
-width:380px;
+padding:18px;
 
 
-padding:25px;
+margin-top:15px;
 
 
-background:#0c0c0c;
+background:#0b0b0b;
 
 
-border:1px solid #333;
+border:1px solid #31515c;
 
 
-border-radius:25px;
+border-radius:18px;
 
 
 }
@@ -291,10 +247,10 @@ border-radius:25px;
 .timer-title{
 
 
-font-size:20px;
+font-size:16px;
 
 
-color:#aaa;
+color:#9edff5;
 
 
 }
@@ -304,23 +260,25 @@ color:#aaa;
 #timer{
 
 
-margin-top:15px;
+margin-top:8px;
 
 
-font-size:50px;
+font-size:38px;
 
 
 font-family:Arial;
 
 
-letter-spacing:8px;
+font-weight:bold;
 
 
-color:#fff;
+letter-spacing:5px;
+
+
+color:#c5f0ff;
 
 
 }
-
 
 
 
@@ -328,13 +286,13 @@ color:#fff;
 .credit{
 
 
-margin-top:25px;
+margin-top:15px;
 
 
-font-size:23px;
+font-size:18px;
 
 
-color:#aaa;
+color:#9edff5;
 
 
 }
@@ -342,201 +300,43 @@ color:#aaa;
 
 
 
-</style>
 
+@media(max-width:390px){
 
-</head>
 
+.logo{
 
-
-<body>
-
-
-
-
-<div class="intro">
-
-<h1>
-
-نحن نبني المستقبل
-
-</h1>
-
-</div>
-
-
-
-
-
-<div class="container">
-
-
-
-
-
-<img src="logo.png" class="logo">
-
-
-
-
-
-<div class="title">
-
-قيد التطوير
-
-</div>
-
-
-
-
-<div class="subtitle">
-
-نعمل على إطلاق تجربة جديدة ومميزة
-
-</div>
-
-
-
-
-
-<div class="workers">
-
-
-<img src="workers-3d.png">
-
-
-</div>
-
-
-
-
-
-
-<div class="timer-box">
-
-
-<div class="timer-title">
-
-الوقت المتبقي للإطلاق
-
-</div>
-
-
-
-<div id="timer">
-
-12:00:00
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-<div class="credit">
-
-تطوير زياد الدري
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-<audio id="music" src="aura-bg.mp3"></audio>
-
-
-
-
-
-
-<script>
-
-
-
-setTimeout(()=>{
-
-
-let audio=document.getElementById("music");
-
-
-audio.volume=.35;
-
-
-audio.play();
-
-
-},4000);
-
-
-
-
-
-
-let end =
-Date.now()
-+
-12*60*60*1000;
-
-
-
-setInterval(()=>{
-
-
-let diff=end-Date.now();
-
-
-
-if(diff<=0){
-
-document.getElementById("timer").innerHTML="تم الإطلاق";
-
-return;
+width:190px;
 
 }
 
 
+.title{
 
-let h=Math.floor(diff/3600000);
+font-size:32px;
 
-let m=Math.floor((diff%3600000)/60000);
-
-let s=Math.floor((diff%60000)/1000);
-
+}
 
 
+.workers img{
 
-document.getElementById("timer").innerHTML=
+width:220px;
 
-String(h).padStart(2,"0")
-+
-":"
-+
-String(m).padStart(2,"0")
-+
-":"
-+
-String(s).padStart(2,"0");
+}
 
 
+.timer-box{
 
-},1000);
+width:260px;
 
-
-
-</script>
-
+}
 
 
-</body>
+#timer{
 
-</html>
+font-size:32px;
+
+}
+
+
+}
